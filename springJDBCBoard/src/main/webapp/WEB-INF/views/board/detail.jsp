@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
@@ -152,6 +153,7 @@ body {
 
 			<div class="btn-group">
 				<a href="/board/updateForm?no=${board.no}" class="btn btn-edit">수정하기</a>
+
 				<a href="/board/delete?no=${board.no}" class="btn btn-delete"
 					onclick="return confirm('정말 삭제하시겠습니까?')">삭제하기</a>
 			</div>

@@ -3,6 +3,7 @@ package com.board.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import com.board.DAO.BoardDAO;
@@ -29,19 +30,24 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public int updateBoard(Board board) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		int Count = boardDAO.updateBoard(board);
+		return Count;
 	}
 
 	@Override
 	public int deleteBoard(Board board) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		int Count = boardDAO.deleteBoard(board);
+		return Count;
 	}
 
 	@Override
 	public List<Board> boardList() throws Exception {
 		List<Board> boardList = boardDAO.boardList();
+		return boardList;
+	}
+	@Override
+	public List<Board> boardSearch(Board board) throws Exception {
+		List<Board> boardList = boardDAO.boardSearch(board);
 		return boardList;
 	}
 

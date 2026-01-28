@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,15 +49,57 @@ body {
 .header span {
 	color: var(--t1-red);
 }
+   /* Buttons */
+    .btn-area {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+    }
 
+    .btn {
+        flex: 1;
+        padding: 15px;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        text-transform: uppercase;
+    }
+
+    .btn-submit {
+        background: var(--t1-red);
+        color: #fff;
+    }
+
+    .btn-submit:hover {
+        background: #ff1a4a;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(226, 1, 45, 0.5);
+    }
+
+    .btn-cancel {
+        background: #333;
+        color: #bbb;
+    }
+
+    .btn-cancel:hover {
+        background: #444;
+        color: #fff;
+    }
 </style>
 </head>
 <body>
 
 	<div class="write-container">
 		<div class="header">
-			<h1>게시판 입력 실패</h1>
+			<h1>${message}</h1>
 		</div>
+		<div class="btn-area">
+           <a href = "/board/insertForm"><button class="btn btn-submit">게시판 등록</button></a>
+           <a href = "/board/boardList"><button class="btn btn-submit">게시판 리스트</button></a>
+        </div>
 	</div>
 
 </body>
