@@ -13,6 +13,8 @@ import com.board.domain.Member;
 import com.board.service.MemberService;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -54,6 +56,7 @@ public class MemberController {
 		}
 		return "member/memberList";
 	}
+
 	
 	
 	
