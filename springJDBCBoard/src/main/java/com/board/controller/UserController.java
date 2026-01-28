@@ -153,9 +153,6 @@ public class UserController {
 		model.addAttribute("message", "로그인 성공하였습니다.");
 		return "user/userForm";
 	}
-	@GetMapping("/userForm")
-	public String userForm(Model model) {
-		return "user/userForm";
-	}
+
 
 }

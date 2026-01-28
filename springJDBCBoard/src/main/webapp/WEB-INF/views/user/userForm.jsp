@@ -106,7 +106,7 @@ body {
 				<span>👤 내 정보 보기</span>
 			</a> <a href="/user/userList" class="menu-item"> <span>📋 회원
 					목록</span>
-			</a> <a href="/user/update?name=${user.name}" class="menu-item">
+			</a> <a href="/user/update" class="menu-item">
 				<span>⚙️ 정보 수정</span>
 			</a>
 		</div>

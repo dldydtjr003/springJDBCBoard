@@ -6,65 +6,112 @@
 <meta charset="UTF-8">
 <title>회원 상세 정보</title>
 <style>
-.form-container {
-	background: #fff;
+/* 전체 배경 및 정렬 */
+body {
+	font-family: 'Pretendard', -apple-system, sans-serif;
+	background-color: #f4f7f9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+/* 컨테이너박스 */
+.detail-container {
+	background-color: #ffffff;
 	padding: 40px;
-	border-radius: 16px;
+	border-radius: 20px;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 	width: 100%;
-	max-width: 420px;
+	max-width: 480px;
 }
 
-.form-group {
-	margin-bottom: 20px;
-}
-
-.form-group label {
-	display: block;
-	margin-bottom: 8px;
-	color: #444;
-	font-weight: 600;
-	font-size: 14px;
-}
-
-.form-group input {
-	width: 100%;
-	padding: 12px 15px;
-	border: 1.5px solid #eee;
-	border-radius: 10px;
-	font-size: 15px;
-	transition: 0.3s;
-	box-sizing: border-box;
-}
-
-.form-group input:focus {
-	border-color: #4a90e2;
-	outline: none;
-	box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
-}
-
-.form-group input[readonly] {
-	background: #f9f9f9;
-	color: #999;
-	cursor: not-allowed;
-}
-
-.btn-submit {
-	width: 100%;
-	padding: 15px;
-	background: #4a90e2;
-	color: white;
-	border: none;
-	border-radius: 10px;
-	font-size: 16px;
+h2 {
+	text-align: center;
+	color: #333;
+	margin-bottom: 30px;
+	font-size: 26px;
 	font-weight: 700;
-	cursor: pointer;
-	transition: 0.3s;
 }
 
-.btn-submit:hover {
-	background: #357abd;
-	transform: translateY(-1px);
+/* 테이블 스타일 커스텀 */
+.info-table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	margin-bottom: 35px;
+	border-top: 2px solid #4a90e2;
+}
+
+.info-table th {
+	text-align: left;
+	padding: 18px 15px;
+	background-color: #fcfcfc;
+	border-bottom: 1px solid #f0f0f0;
+	color: #666;
+	width: 35%;
+	font-size: 15px;
+}
+
+.info-table td {
+	padding: 18px 15px;
+	border-bottom: 1px solid #f0f0f0;
+	color: #333;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+/* 버튼 그룹 레이아웃 */
+.btn-group {
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* 수정/삭제 2열 */
+	gap: 12px;
+}
+
+/* 공통 버튼 스타일 */
+.btn {
+	padding: 14px;
+	border-radius: 10px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 15px;
+	transition: 0.3s ease;
+	display: inline-block;
+}
+
+.btn-update {
+	background-color: #4a90e2;
+	color: white;
+}
+
+.btn-update:hover {
+	background-color: #357abd;
+	transform: translateY(-2px);
+}
+
+.btn-delete {
+	background-color: #fdeaea;
+	color: #e74c3c;
+}
+
+.btn-delete:hover {
+	background-color: #e74c3c;
+	color: white;
+	transform: translateY(-2px);
+}
+
+.btn-list {
+	grid-column: span 2; /* 목록 버튼은 길게 아래로 */
+	background-color: #f8f9fa;
+	color: #666;
+	border: 1px solid #eee;
+	margin-top: 5px;
+}
+
+.btn-list:hover {
+	background-color: #eee;
 }
 </style>
 </head>
