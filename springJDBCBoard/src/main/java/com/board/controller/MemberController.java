@@ -16,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 
 
 
+
 @RequestMapping("/member")
 @Controller
 @Slf4j
@@ -30,9 +31,10 @@ public class MemberController {
 	}
 	@PostMapping("/insert")
 	public String insertMember(Member member, Model model) {
-		
+
+		int Count;
 		try {
-			int Count = memberService.insertMember(member);
+			Count = memberService.insertMember(member);
 			if(Count > 0) {
 				return "member/success";
 			}
@@ -41,7 +43,7 @@ public class MemberController {
 		}
 		return "member/failed";
 	}
-	@GetMapping("/memberList")
+	@GetMapping("memberList")
 	public String memberList(Member member, Model model) {
 		List<Member> memberList;
 		try {
@@ -52,6 +54,7 @@ public class MemberController {
 		}
 		return "member/memberList";
 	}
+	
 	
 	
 }
