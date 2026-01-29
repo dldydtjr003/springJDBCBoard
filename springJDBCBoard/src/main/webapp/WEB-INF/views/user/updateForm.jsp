@@ -125,7 +125,7 @@ h2 {
 
 			<div class="btn-group">
 				<button type="submit" class="btn btn-submit">수정 완료</button>
-				<a href="user/userList" class="btn btn-cancel">취소</a>
+				<a href="/user/userList" class="btn btn-cancel">취소</a>
 			</div>
 
 		</form>

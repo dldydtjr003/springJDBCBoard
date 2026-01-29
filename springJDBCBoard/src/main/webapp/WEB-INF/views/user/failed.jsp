@@ -94,7 +94,8 @@ p {
 	<div class="result-container">
 
 		<h2>${message}</h2>
-		<a href="/user/insertForm" class="back-link">메인으로 돌아가기</a>
+		<a href="/user/insertForm" class="back-link">메인으로 돌아가기</a> <a
+			href="/user/userList" class="btn-login">회원 리스트 보러가기</a>
 	</div>
 </body>
 </html>
