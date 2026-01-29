@@ -23,7 +23,7 @@
 * **Framework:** Spring Boot 5.0.1
 * **Language:** Java 17
 * **Database:** Oracle
-* **ORM:** Spring Data JPA
+* **ORM:** Spring Data JDBC
 
 ### **Tools**
 * **VCS:** Git, Sourcetree
@@ -40,4 +40,4 @@ com.board
 ├── domain       # Entity 클래스 (@Entity 적용)
 ├── repository   # JPA를 활용한 DB 접근 (BoardRepository)
 ├── service      # 비즈니스 로직 처리 (@Transactional 적용)
-└── dto          # 데이터 전송 객체 (Optional)
+
